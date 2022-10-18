@@ -9,10 +9,30 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+const characters = [
+  {
+    id: 1 ,
+    name: "personagens 1"
+  },
+  {
+    id: 2 ,
+    name: "personagens 2"
+  },
+  {
+    id: 3 ,
+    name: "personagens 3"
+  },
+]
+
+
 app.get('/', (req, res) => {
   res.json({
-    test: "a"
+
+    characters
+
+  
   })
 })
 
+app.get 
 export default app;
